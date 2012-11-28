@@ -13,7 +13,7 @@ our @EXPORT_OK;
 use Mac::AppleScript qw(RunAppleScript);
 use Carp qw(croak);
 
-our $VERSION = 1.00;
+our $VERSION = "1.00";
 
 =head1 NAME
 
