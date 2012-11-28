@@ -1,7 +1,7 @@
 ---
 abstract: 'Run Keyboard Maestro macros'
 author:
-  - 'Stairways Software Pty Ltd.'
+  - 'Written by Mark Fowler <mark@twoshortplanks.com>'
 build_requires:
   ExtUtils::MakeMaker: 6.59
 configure_requires:

@@ -9,6 +9,6 @@ requires       'Mac::AppleScript' => 0.04;
 license 'perl';
 githubmeta;
 author_tests('xt');
-all_from       'lib/Mac/KeyboardMaestro.pm';
+readme_from    'lib/Mac/KeyboardMaestro.pm';
 
 WriteAll;
