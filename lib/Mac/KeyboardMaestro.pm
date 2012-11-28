@@ -13,6 +13,8 @@ our @EXPORT_OK;
 use Mac::AppleScript qw(RunAppleScript);
 use Carp qw(croak);
 
+our $VERSION = 1.00;
+
 =head1 NAME
 
 Mac::KeyboardMaestro - Run Keyboard Maestro macros
@@ -139,11 +141,36 @@ push @EXPORT_OK, 'km_delete';
 
 =back
 
+=head1 AUTHOR
+
+Written by Mark Fowler <mark@twoshortplanks.com>
+
 =head1 COPYRIGHT
 
-Keyboard Maestro itself is copyright 2011 Stairways Software Pty Ltd.
-All Rights Reserved.
+Copyright Mark Fowler 2012.  All Rights Reserved.
 
+This program is free software; you can redistribute it
+and/or modify it under the same terms as Perl itself.
+
+Keyboard Maestro itself is copyright Stairways Software Pty Ltd.  Neither Mark
+Fowler nor this Perl library is not associated with Keyboard Maestro or
+Stairways Software Pty Ltd.
+
+=head1 BUGS
+
+Bugs should be reported via this distribution's
+CPAN RT queue.  This can be found at
+L<https://rt.cpan.org/Dist/Display.html?Mac-KeyboardMaestro>
+
+You can also address issues by forking this distribution
+on github and sending pull requests.  It can be found at
+L<http://github.com/2shortplanks/Mac-KeyboardMaestro>
+
+=head1 SEE ALSO
+
+L<Mac::AppleScript>, L<http://www.keyboardmaestro.com/>
+
+=cut
 
 
 1;

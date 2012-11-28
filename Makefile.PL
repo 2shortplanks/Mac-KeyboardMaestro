@@ -1,6 +1,6 @@
 use inc::Module::Install;
 
-name           'Mac::KeyboardMaestro';
+name           'Mac-KeyboardMaestro';
 all_from       'lib/Mac/KeyboardMaestro.pm';
 
 requires       'Test::More'       => 0;
