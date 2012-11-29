@@ -1,0 +1,4 @@
+1.01    Better (and more accurate) documentation.
+        Tests to ensure non-existent variables return the empty string
+
+1.00    Initial release

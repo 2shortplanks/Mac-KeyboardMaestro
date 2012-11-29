@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 2;
+use Test::More tests => 3;
 use Mac::KeyboardMaestro qw(km_set km_get km_delete);
 
 my $varname = "mackeyboardmaestrotestsuite";
@@ -13,3 +13,7 @@ km_set $varname => $unique;
 is km_get $varname, $unique, "variable was set";
 km_delete $varname;
 is km_get $varname, "", "variable is gone!";
+
+
+# check that a totally random variable returns the empty string
+is km_get "var".time.$$, "", "random var does not exist";

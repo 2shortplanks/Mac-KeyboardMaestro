@@ -13,7 +13,7 @@ our @EXPORT_OK;
 use Mac::AppleScript qw(RunAppleScript);
 use Carp qw(croak);
 
-our $VERSION = "1.00";
+our $VERSION = "1.01";
 
 =head1 NAME
 
@@ -46,7 +46,9 @@ values as AppleScript by mistake.
 
 =head2 Functions
 
-These functions can be imported, or you can use them fully qualified.
+These functions can be imported, or you can use them fully qualified.  All
+functions throw exceptions if the AppleScript interface to Keyboard Maestro
+returns an error.
 
 =over
 
@@ -54,8 +56,7 @@ These functions can be imported, or you can use them fully qualified.
 
 =item km_macro $macro_uuid
 
-Execute the named macro / macro with the passed uuid.  Returns nothing.  Throws
-and exception if there's a problem.
+Execute the named macro / macro with the passed uuid.  Returns an empty list.
 
 =cut
 
@@ -97,7 +98,7 @@ push @EXPORT_OK, 'km_macro';
 =item km_set $varname, $value
 
 Sets the value of the corrisponding Keyboard Macro variable.  C<$value> will
-be automatically stringified.
+be automatically stringified.  Returns an empty list.
 
 =cut
 
@@ -113,7 +114,7 @@ push @EXPORT_OK, 'km_set';
 =item km_get $varname
 
 Gets the current value of the corrisponding Keyboard Macro variable.  Returns
-C<undef> if no such variable exists.
+the empty string if the variable does not exist.
 
 =cut
 
@@ -127,7 +128,7 @@ push @EXPORT_OK, 'km_get';
 
 =item km_delete $varname
 
-Deletes the corrisponding Keyboard Macro variable
+Deletes the corrisponding Keyboard Macro variable.  Returns an empty list.
 
 =cut
 
@@ -153,7 +154,7 @@ This program is free software; you can redistribute it
 and/or modify it under the same terms as Perl itself.
 
 Keyboard Maestro itself is copyright Stairways Software Pty Ltd.  Neither Mark
-Fowler nor this Perl library is not associated with Keyboard Maestro or
+Fowler nor this Perl library is associated with Keyboard Maestro or
 Stairways Software Pty Ltd.
 
 =head1 BUGS
