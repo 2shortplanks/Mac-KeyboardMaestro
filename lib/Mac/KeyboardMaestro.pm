@@ -87,6 +87,14 @@ sub _escaped($) {
   return '"' . $var . '"'
 }
 
+sub _varname($) {
+  my $var = shift;
+  unless ($var =~ /\A [A-Za-z] [A-Za-z0-9_ ]* \z/x) {
+    croak "Invalid Keyboard Maestro variable name '$var'";
+  }
+  return _escaped $var;
+}
+
 sub km_macro($) { _ras <<"APPLESCRIPT"; return }
   tell application "Keyboard Maestro Engine"
      do script @{[ _escaped shift ]}
@@ -104,7 +112,7 @@ be automatically stringified.  Returns an empty list.
 
 sub km_set($$) { _ras <<"APPLESCRIPT"; return }
   tell application "Keyboard Maestro Engine"
-    set kmVarRef to make variable with properties { name:@{[ _escaped shift ]} }
+    set kmVarRef to make variable with properties { name:@{[ _varname shift ]} }
     set value of kmVarRef to @{[ _escaped shift ]}
     {}
   end tell
@@ -120,7 +128,7 @@ an empty string if the variable does not exist.
 
 sub km_get($) { return _ras <<"APPLESCRIPT" }
   tell application "Keyboard Maestro Engine"
-    set kmVarRef to make variable with properties { name:@{[ _escaped shift ]} }
+    set kmVarRef to make variable with properties { name:@{[ _varname shift ]} }
     get value of kmVarRef
   end tell
 APPLESCRIPT
@@ -134,7 +142,7 @@ Deletes the corrisponding Keyboard Maestro variable.  Returns an empty list.
 
 sub km_delete($) { _ras <<"APPLESCRIPT"; return }
     tell application "Keyboard Maestro Engine"
-      delete variable @{[ _escaped shift ]}
+      delete variable @{[ _varname shift ]}
       {}
     end tell
 APPLESCRIPT

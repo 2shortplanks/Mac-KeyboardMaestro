@@ -1,4 +1,5 @@
 1.01    Better (and more accurate) documentation.
         Tests to ensure non-existent variables return the empty string
+        Better error messages when you use an invalid variable name
 
 1.00    Initial release
