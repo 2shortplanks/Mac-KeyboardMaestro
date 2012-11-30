@@ -35,16 +35,16 @@ DESCRIPTION
         empty list.
 
     km_set $varname, $value
-        Sets the value of the corrisponding Keyboard Macro variable. $value
-        will be automatically stringified. Returns an empty list.
+        Sets the value of the corrisponding Keyboard Maestro variable.
+        $value will be automatically stringified. Returns an empty list.
 
     km_get $varname
-        Gets the current value of the corrisponding Keyboard Macro variable.
-        Returns the empty string if the variable does not exist.
+        Gets the current value of the corrisponding Keyboard Maestro
+        variable. Returns the empty string if the variable does not exist.
 
     km_delete $varname
-        Deletes the corrisponding Keyboard Macro variable. Returns an empty
-        list.
+        Deletes the corrisponding Keyboard Maestro variable. Returns an
+        empty list.
 
 AUTHOR
     Written by Mark Fowler <mark@twoshortplanks.com>

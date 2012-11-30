@@ -97,7 +97,7 @@ push @EXPORT_OK, 'km_macro';
 
 =item km_set $varname, $value
 
-Sets the value of the corrisponding Keyboard Macro variable.  C<$value> will
+Sets the value of the corrisponding Keyboard Maestro variable.  C<$value> will
 be automatically stringified.  Returns an empty list.
 
 =cut
@@ -113,7 +113,7 @@ push @EXPORT_OK, 'km_set';
 
 =item km_get $varname
 
-Gets the current value of the corrisponding Keyboard Macro variable.  Returns
+Gets the current value of the corrisponding Keyboard Maestro variable.  Returns
 the empty string if the variable does not exist.
 
 =cut
@@ -128,7 +128,7 @@ push @EXPORT_OK, 'km_get';
 
 =item km_delete $varname
 
-Deletes the corrisponding Keyboard Macro variable.  Returns an empty list.
+Deletes the corrisponding Keyboard Maestro variable.  Returns an empty list.
 
 =cut
 
