@@ -114,7 +114,7 @@ push @EXPORT_OK, 'km_set';
 =item km_get $varname
 
 Gets the current value of the corrisponding Keyboard Maestro variable.  Returns
-the empty string if the variable does not exist.
+an empty string if the variable does not exist.
 
 =cut
 
