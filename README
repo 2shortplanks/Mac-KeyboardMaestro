@@ -40,7 +40,7 @@ DESCRIPTION
 
     km_get $varname
         Gets the current value of the corrisponding Keyboard Maestro
-        variable. Returns the empty string if the variable does not exist.
+        variable. Returns an empty string if the variable does not exist.
 
     km_delete $varname
         Deletes the corrisponding Keyboard Maestro variable. Returns an
