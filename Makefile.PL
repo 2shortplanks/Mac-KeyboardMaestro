@@ -1,3 +1,15 @@
+#
+# Attention automated build system engineers:
+# 
+# If you're looking for a way to force the Makefile.PL to be
+# created even if Keyboard Maestro Engine isn't running in an automated
+# way which doesn't require you to answer "y" to the interactive prompt
+# then set the PERL_KM_FORCE enviroment variable to a true value
+#     -- Mark
+#
+
+use ExtUtils::MakeMaker;
+
 BEGIN {
 
 	# indicate for CPAN testers that we only support OS X
@@ -6,7 +18,7 @@ BEGIN {
 	}
 
 	# check that Keyboard Maestro is running and cowardly refuse to
-	# install if it's not
+	# install if it's not.
 	unless (`ps x` =~ /Keyboard Maestro Engine/ || $ENV{PERL_KM_FORCE}) {
 		print STDERR <<'BLURB';
 This module requires Keyboard Maestro to be installed.  The Keboard Maestro
@@ -16,16 +28,14 @@ You can download a version of Keyboard Maestro (with a free trial) from:
 
      http://www.keyboardmaestro.com/
 
-Giving up without creating a Makefile.  Please re-run Makefile.PL once you've
-installed and started Keyboard Maestro Engine.
+If you do not have the Keyboard Maestro Engine running when you "make test"
+then the test suite will fail.
 
-(If for some reason you really want to install this module without first
-installing Keyboard Maestro and you don't mind the test suite of this module
-failing then set the PERL_KM_FORCE environment variable to true before running
-this Makefile.PL)
 BLURB
+		my $q = ExtUtils::MakeMaker::prompt("Continue with install (y/n)?","n");
+
 		# as per http://wiki.cpantesters.org/wiki/CPANAuthorNotes
-		exit 0;
+		exit 0 unless $q =~ /y/i;
 	}
 }
 
