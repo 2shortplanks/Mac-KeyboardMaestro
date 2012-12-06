@@ -1,7 +1,7 @@
 #
 # Attention automated build system engineers:
 # 
-# If you're looking for a way to force the Makefile.PL to be
+# If you're looking for a way to force the Makefile to be
 # created even if Keyboard Maestro Engine isn't running in an automated
 # way which doesn't require you to answer "y" to the interactive prompt
 # then set the PERL_KM_FORCE enviroment variable to a true value
