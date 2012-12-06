@@ -21,7 +21,7 @@ BEGIN {
 	# install if it's not.
 	unless (`ps x` =~ /Keyboard Maestro Engine/ || $ENV{PERL_KM_FORCE}) {
 		print STDERR <<'BLURB';
-This module requires Keyboard Maestro to be installed.  The Keboard Maestro
+This module requires Keyboard Maestro to be installed.  The Keyboard Maestro
 Engine (the doohicky that sits in your menubar) doesn't seem to be running.
 
 You can download a version of Keyboard Maestro (with a free trial) from:
