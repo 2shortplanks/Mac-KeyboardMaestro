@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!--
+          Hello!
+
+          This is a keyboard maestro test macro that I have installed on
+          my machine.  If you want to run 03macro.t properly you need to
+          first double click this file to install this macro, then you
+          need to set the enviroment var THIS_IS_MARKF_YOU_BETCHA before
+          you run the test.
+
+          Kind reguards.
+
+          Mark.
+-->
+
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>JustDisplay</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetClipboardToText</string>
+						<key>Text</key>
+						<string>%Variable%mackeyboardmaestrotestsuite%</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>Calculate</string>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>FilterClipboard</string>
+					</dict>
+					<dict>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%CurrentClipboard%</string>
+						<key>Variable</key>
+						<string>mackeyboardmaestrotestsuite</string>
+					</dict>
+				</array>
+				<key>IsActive</key>
+				<true/>
+				<key>Name</key>
+				<string>Mac::KeyboardMaestro test</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>44733D7D-94BC-433F-AD93-E169BBC6FAFB</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Mac::KeyboardM</string>
+		<key>UID</key>
+		<string>B9E95F4A-8F95-463F-916D-F82119DB81B2</string>
+	</dict>
+</array>
+</plist>

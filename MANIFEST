@@ -18,6 +18,7 @@ README
 t/01basic.t
 t/02vars.t
 t/03macro.t
+t/testing.kmmacros
 xt/001pod.t
 xt/002podcoverage.t
 xt/003perlcritic.t

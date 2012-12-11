@@ -3,8 +3,13 @@
 use strict;
 use warnings;
 
-# there's no auotmated way to install macros as far as I know
-# so for the moment we can only run this test on my own machine
+# there's no auotmated way to uninstall macros as far as I know
+# so for the moment we can only run this test on my own machine.
+#
+# If you want to run this test properly you'll need to install
+# testing.kmmacros (which is distributed in the directy containing
+# this test) by double clicking it, then set the THIS_IS_MARKF_YOU_BETCA
+# env varible before executing this test.
 use Test::More;
 BEGIN {
 	unless ($ENV{THIS_IS_MARKF_YOU_BETCHA}) {
