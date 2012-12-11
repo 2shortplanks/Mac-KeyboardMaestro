@@ -30,4 +30,4 @@ resources:
     type: git
     url: git://github.com/2shortplanks/Mac-KeyboardMaestro.git
     web: https://github.com/2shortplanks/Mac-KeyboardMaestro/tree
-version: 1.01
+version: 1.02
